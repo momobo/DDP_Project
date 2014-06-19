@@ -4,7 +4,7 @@ library(shiny)
 shinyUI(
   pageWithSidebar(
     # Application title
-    headerPanel("MPG prediction"),
+    headerPanel("Car consume prediction"),
   
     sidebarPanel(
       numericInput('weight', 'Weight kg', 1000, min = 500, max = 4000, step = 5),
