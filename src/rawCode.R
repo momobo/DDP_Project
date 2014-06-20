@@ -6,12 +6,10 @@ library(slidify)
 
 getwd()
 setwd("~")
-setwd("~\\..\\Google Drive\\Data Science\\09_DevelopingDataProducts\\DDP_slide")
+setwd("~\\..\\Google Drive\\Data Science\\09_DevelopingDataProducts\\DDP_Project")
 author("DDP project")
 dir()
 
 library(knitr)
 slidify("index.Rmd")
 browseURL("index.html")
-
-publish(user = "momobo", repo = "DDP_slide")

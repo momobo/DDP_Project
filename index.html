@@ -45,11 +45,11 @@
     <h2>A tool for Gasoline Consumption Prediction</h2>
   </hgroup>
   <article data-timings="">
-    <ol>
+    <ul>
 <li>Draw from the power of the mighty multiple linear model</li>
 <li>Is it hosted to shiniapps.io</li>
 <li>It is only a proof of concept, but it works!</li>
-</ol>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -57,10 +57,14 @@
 
 <slide class="class" id="id" style="background:url(https://raw.githubusercontent.com/momobo/DDP_slide/master/img/bgWhite.jpg);">
   <hgroup>
-    <h2>Slide 3</h2>
+    <h2>Linear model</h2>
   </hgroup>
   <article data-timings="">
-    <p>yadda yadda</p>
+    <ul>
+<li>The data available are collected in 1974 from Motor Trend, and comprise fuel consumption and som aspects of automobile design for 32 automobiles. </li>
+<li>A linear model has been developed to model the consumption in miles per gallon, using three simple predictors: the weight of the car in lb * 1000, the time in seconds to cover 1/4 of mile and the type of transmission (automatic or manual)</li>
+<li>The model has been translated in metric unities </li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -68,10 +72,22 @@
 
 <slide class="class" id="id" style="background:url(https://raw.githubusercontent.com/momobo/DDP_slide/master/img/bgWhite.jpg);">
   <hgroup>
-    <h2>Slide 4</h2>
+    <h2>The point of the exercise</h2>
   </hgroup>
   <article data-timings="">
-    <p>yadda yadda</p>
+    <ul>
+<li><p>The use the combination of statistical language R, the simple developement of models and the rapid
+deployment with shinyapp.io demonstrate the extreme facility in developing and deploying simple plug-in statistical product.</p></li>
+<li><p>A linear product could be deployed with a couple of lines of code:</p></li>
+</ul>
+
+<pre><code class="r">fit &lt;- lm(mpg ~ am  + wt + qsec, mtcars)
+coef(fit)
+</code></pre>
+
+<pre><code>## (Intercept)          am          wt        qsec 
+##       9.618       2.936      -3.917       1.226
+</code></pre>
 
   </article>
   <!-- Presenter Notes -->
@@ -79,10 +95,16 @@
 
 <slide class="class" id="id" style="background:url(https://raw.githubusercontent.com/momobo/DDP_slide/master/img/bgWhite.jpg);">
   <hgroup>
-    <h2>Slide 5</h2>
+    <h2>Why this app is cool in itself</h2>
   </hgroup>
   <article data-timings="">
-    <p>yadda yadda</p>
+    <ul>
+<li>You could evaluate the gasoline consumption of a car from three simple basic characteristics and then, knowing how many kilometer you do in a year, evaluate the yearly gasoline cost.</li>
+</ul>
+
+<p>(yes, I know that this is not very precise, but you know, prediction is hard!)</p>
+
+<p>And Don&#39;t forget to try it: <a href="https://momobo-coursera.shinyapps.io/DDP_Project/">https://momobo-coursera.shinyapps.io/DDP_Project/</a></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -100,19 +122,19 @@
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Slide 3'>
+        data-slide=2 title='Linear model'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Slide 4'>
+        data-slide=3 title='The point of the exercise'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Slide 5'>
+        data-slide=4 title='Why this app is cool in itself'>
          4
       </a>
     </li>
