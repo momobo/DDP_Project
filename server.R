@@ -18,7 +18,7 @@ shinyServer(
   function(input, output) {
     
     output$inputValue <- renderPrint({paste(input$weight,"(weight);", 
-                                            input$am,"(transm.)", 
+                                            input$am,"(transm.);", 
                                             input$qsec,"(time 1/4 ml)" )})
     output$prediction <- renderPrint({calcMPG(input$weight, input$am, input$qsec)})
     output$distPlot <- renderPlot({
