@@ -33,11 +33,11 @@ shinyServer(
         
         g <- ggplot(mtcars, aes(x=wt*453.592,y=mpg*0.425144, colour=qsec, shape=as.factor(am)))
         g <- g + xlab("Weight in kg") + ylab("Gas consume in km/l") 
-        g <- g + geom_point() + scale_colour_gradient(low = "green", high = "red", "time 400 m")
+        g <- g + geom_point() + scale_colour_gradientn(colours=rainbow(3))
         g <- g + ggtitle("See your car confronted with the others")
         g <- g + annotate("text", x = w+100, y = m+0.5, label = "Predicted Car")
         g <- g + scale_shape_discrete(name="Transmission", labels=c("manual", "automatic"))
-        g + geom_point(x=w, y=m, shape=tt+15, col="black", size=5)
+        g + geom_point(x=w, y=m, shape=tt+16, col=q, size=5)
         
     })
   }
